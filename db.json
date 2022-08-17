@@ -1,0 +1,637 @@
+{
+  "userlist": [
+    {
+      "id": "001",
+      "tel": "13468092456",
+      "username": "张三",
+      "age": "77",
+      "sex": "男",
+      "regist_time": "2020-09-03",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1",
+      "key": 0
+    },
+    {
+      "id": "002",
+      "tel": "14356783456",
+      "username": "晓晓",
+      "age": "21",
+      "sex": "女",
+      "regist_time": "2021-01-04",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "003",
+      "tel": "13465353456",
+      "username": "小梅",
+      "age": "22",
+      "sex": "女",
+      "regist_time": "2019-06-05",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "004",
+      "tel": "15427547865",
+      "username": "柱子",
+      "age": "33",
+      "sex": "男",
+      "regist_time": "2017-02-07",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "006",
+      "tel": "17809345782",
+      "username": "小芳",
+      "age": "23",
+      "sex": "女",
+      "regist_time": "2021-02-13",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "007",
+      "tel": "16534566554",
+      "username": "狗剩",
+      "age": "45",
+      "sex": "男",
+      "regist_time": "2018-07-19",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "008",
+      "tel": "13454342345",
+      "username": "红梅",
+      "age": "23",
+      "sex": "女",
+      "regist_time": "2020-03-07",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "009",
+      "tel": "13454452345",
+      "username": "绿梅",
+      "age": "21",
+      "sex": "女",
+      "regist_time": "2017-03-07",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "010",
+      "tel": "13954342345",
+      "username": "石飞",
+      "age": "28",
+      "sex": "男",
+      "regist_time": "2010-08-17",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "011",
+      "tel": "18754934345",
+      "username": "叶凡",
+      "age": "34",
+      "sex": "男",
+      "regist_time": "2016-10-24",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1",
+      "key": 9
+    },
+    {
+      "id": "012",
+      "tel": "17084242343",
+      "username": "小费",
+      "age": "12",
+      "sex": "男",
+      "regist_time": "2007-11-07",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "013",
+      "tel": "18493722345",
+      "username": "吴晗",
+      "age": "43",
+      "sex": "男",
+      "regist_time": "2021-03-09",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "014",
+      "tel": "18902648245",
+      "username": "姬紫月",
+      "age": "21",
+      "sex": "女",
+      "regist_time": "2001-03-27",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "015",
+      "tel": "19023072345",
+      "username": "安澜",
+      "age": "26",
+      "sex": "女",
+      "regist_time": "2003-7-18",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "017",
+      "tel": "13278930423",
+      "username": "莉莉",
+      "age": "19",
+      "sex": "女",
+      "regist_time": "2020-12-31",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "018",
+      "tel": "14378092398",
+      "username": "芳芳",
+      "age": "15",
+      "sex": "女",
+      "regist_time": "2021-02-23",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1",
+      "key": 15
+    },
+    {
+      "id": "019",
+      "tel": "14387092384",
+      "username": "严莉莉",
+      "age": "34",
+      "sex": "女",
+      "regist_time": "2004-02-04",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "020",
+      "tel": "12478540923",
+      "username": "兰兰",
+      "age": "29",
+      "sex": "女",
+      "regist_time": "2020-05-08",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "021",
+      "tel": "13289430234",
+      "username": "曦",
+      "age": "13",
+      "sex": "女",
+      "regist_time": "2002-02-22",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1"
+    },
+    {
+      "id": "022",
+      "tel": "14387985200",
+      "username": "李子柒",
+      "age": "28",
+      "sex": "女",
+      "regist_time": "2015-06-26",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1",
+      "key": 19
+    },
+    {
+      "id": "VGgoDUY",
+      "tel": "14934902332",
+      "username": "3434",
+      "age": "15",
+      "sex": "男",
+      "regist_time": "2021-09-26",
+      "ligin_count": "15",
+      "code": "700",
+      "ip_adress": "127.0.0.1",
+      "key": 20
+    }
+  ],
+  "commuinfo": [
+    {
+      "id": "004",
+      "username": "鼬子",
+      "tel": "17347832992",
+      "states": "待审核",
+      "local": "火之国木叶村",
+      "adress": "宇智波街道23号",
+      "mailcode": "786900",
+      "qqcode": "121212",
+      "email": "121212@qq.com",
+      "key": 1
+    },
+    {
+      "id": "005",
+      "username": "春野樱",
+      "tel": "13209788638",
+      "states": "待审核",
+      "local": "长版区",
+      "adress": "死亡大街",
+      "mailcode": "454455",
+      "qqcode": "2132313",
+      "email": "2132313@qq.com"
+    },
+    {
+      "id": "006",
+      "username": "谢连芬",
+      "tel": "18756327653",
+      "states": "待审核",
+      "local": "西安市雁塔区",
+      "adress": "科技四路",
+      "mailcode": "784384",
+      "qqcode": "34658253",
+      "email": "34658253@qq.com",
+      "key": 3
+    },
+    {
+      "id": "007",
+      "username": "小丽",
+      "tel": "14390872834",
+      "states": "待审核",
+      "local": "天津市长乐区",
+      "adress": "拐子街98号",
+      "mailcode": "456445",
+      "qqcode": "3564245",
+      "email": "3564245@qq.com"
+    },
+    {
+      "id": "009",
+      "username": "江姐2",
+      "tel": "18939932454",
+      "states": "待审核",
+      "local": "陕西省延安市",
+      "adress": "浦路街44号",
+      "mailcode": "433232",
+      "qqcode": "542453",
+      "email": "542453@qq.com",
+      "key": 6
+    },
+    {
+      "id": "010",
+      "username": "淑艳芬",
+      "tel": "18434240883",
+      "states": "待审核",
+      "local": "陕西省汉中市",
+      "adress": "大帆大道天子街3号",
+      "mailcode": "909898",
+      "qqcode": "5445543",
+      "email": "5445543@qq.com"
+    }
+  ],
+  "merchanlist": [
+    {
+      "id": "001",
+      "merchanname": "魏家凉皮",
+      "type": "早餐类",
+      "cost": "15",
+      "commrating": "98",
+      "local": "西安市火车站",
+      "num": "2",
+      "tranroute": "地铁3号线",
+      "tel": "0915-3223454",
+      "username": "陈老板",
+      "key": 0
+    },
+    {
+      "id": "002",
+      "merchanname": "岐山臊子面",
+      "type": "面食类",
+      "cost": "18",
+      "commrating": "95",
+      "local": "山东省岐山县",
+      "num": "23",
+      "tranroute": "78路公交",
+      "tel": "0823-7656364",
+      "username": "马老板"
+    },
+    {
+      "id": "004",
+      "merchanname": "羊肉泡馍",
+      "type": "泡馍类",
+      "cost": "35",
+      "commrating": "91",
+      "local": "西安市雁塔区",
+      "num": "4",
+      "tranroute": "地铁2号线-地铁3号线",
+      "tel": "0734-2343783",
+      "username": "刘老板",
+      "key": 2
+    },
+    {
+      "id": "003",
+      "merchanname": "乾县豆腐脑",
+      "type": "早餐类",
+      "cost": "8",
+      "commrating": "78",
+      "local": "乾县",
+      "num": "7",
+      "tranroute": "步行",
+      "tel": "0342-6543232",
+      "username": "陈老板",
+      "key": 3
+    },
+    {
+      "id": "006",
+      "merchanname": "手抓饼",
+      "type": "小吃类",
+      "cost": "8",
+      "commrating": "88",
+      "local": "沛县疙瘩村",
+      "num": "36",
+      "tranroute": "驴拉车",
+      "tel": "0000-2323343",
+      "username": "无名氏",
+      "key": 4
+    },
+    {
+      "id": "005",
+      "merchanname": "水盆羊肉",
+      "type": "小吃类",
+      "cost": "250",
+      "commrating": "96",
+      "local": "渭南市",
+      "num": "2",
+      "tranroute": "34路公交",
+      "tel": "0873-2343263",
+      "username": "林老板"
+    },
+    {
+      "id": "007",
+      "merchanname": "羊肉馅饺子",
+      "type": "饺子类",
+      "cost": "20",
+      "commrating": "87",
+      "local": "老胡同",
+      "num": "8",
+      "tranroute": "滴滴快车",
+      "tel": "0232-4398923",
+      "username": "钱老板",
+      "key": 6
+    },
+    {
+      "id": "008",
+      "merchanname": "北京烤鸭",
+      "type": "烧烤类",
+      "cost": "199",
+      "commrating": "99",
+      "local": "北京市光明区",
+      "num": "1",
+      "tranroute": "地铁12号线-地铁8号线",
+      "tel": "0387-2398743",
+      "username": "魏老板"
+    },
+    {
+      "id": "009",
+      "merchanname": "蒸面",
+      "type": "早餐类",
+      "cost": "9",
+      "commrating": "95",
+      "local": "陕西省安康市",
+      "num": "2",
+      "tranroute": "高新8路公交",
+      "tel": "0915-3289032",
+      "username": "周老板"
+    },
+    {
+      "id": "010",
+      "merchanname": "烩菜煮馍",
+      "type": "小吃类",
+      "cost": "12",
+      "commrating": "81",
+      "local": "西安市雁塔区",
+      "num": "22",
+      "tranroute": "918路公交",
+      "tel": "0914-2424932",
+      "username": "冯老板"
+    },
+    {
+      "id": "011",
+      "merchanname": "自助火锅",
+      "type": "火锅类",
+      "cost": "78",
+      "commrating": "89",
+      "local": "陕西省咸阳市",
+      "num": "9",
+      "tranroute": "滴滴",
+      "tel": "0876-3443982",
+      "username": "魏老板",
+      "key": 10
+    },
+    {
+      "id": "012",
+      "merchanname": "牛肉面",
+      "type": "面食类",
+      "cost": "17",
+      "commrating": "90",
+      "local": "甘肃省",
+      "num": "5",
+      "tranroute": "地铁3号线",
+      "tel": "0934-3423543",
+      "username": "刘老板"
+    },
+    {
+      "id": "44",
+      "merchanname": "44",
+      "type": "44",
+      "cost": "44",
+      "commrating": "44",
+      "local": "44",
+      "num": "44",
+      "tranroute": "44",
+      "tel": "44",
+      "username": "44"
+    }
+  ],
+  "loginaccou": [
+    {
+      "id": "001",
+      "name": "北京烤鸭",
+      "accouname": "dsfgsa",
+      "tel": 13289763483,
+      "email": "1243983@qq.com",
+      "registime": "2021-07-19",
+      "root": "管理员",
+      "roottype": "所有权限",
+      "state": "启用",
+      "username": "张三",
+      "workcode": "0981",
+      "department": "行政部",
+      "position": "经理",
+      "logincount": "23",
+      "order": "240",
+      "safelevel": "中级"
+    },
+    {
+      "id": "003",
+      "name": "正宗陕西泡馍",
+      "accouname": "hfytef",
+      "tel": "13468092456",
+      "email": "121212@qq.com",
+      "registime": "2021-09-24",
+      "root": "管理员",
+      "roottype": "所有权限",
+      "state": "启用",
+      "username": "ccc",
+      "workcode": "0943",
+      "department": "餐饮部",
+      "position": "总经理",
+      "logincount": "123",
+      "order": "34",
+      "safelevel": "最高",
+      "key": 1
+    },
+    {
+      "id": "002",
+      "name": "宏记商铺S",
+      "accouname": "767ghww",
+      "tel": "14378072737",
+      "email": "34658253@qq.com",
+      "registime": "2021-02-08",
+      "root": "管理员",
+      "roottype": "所有权",
+      "state": "启用",
+      "username": "李振东",
+      "workcode": "2322",
+      "department": "人事部",
+      "position": "部门策划",
+      "logincount": "34",
+      "order": "54",
+      "safelevel": "中级",
+      "key": 2
+    }
+  ],
+  "orderlist": [
+    {
+      "id": "001",
+      "ordercode": "ewrwadw",
+      "ordertime": "2021-09-12T15:22",
+      "ordermoney": "999",
+      "goodsname": "牛市",
+      "goodscount": 898,
+      "ordertype": "支付宝",
+      "username": "小丽",
+      "state": "已收货",
+      "key": 0
+    },
+    {
+      "id": "0422",
+      "ordercode": "8gfd667gh6",
+      "ordertime": "2021-09-12T15:21",
+      "ordermoney": "890",
+      "goodsname": "鸡排",
+      "goodscount": "7",
+      "ordertype": "支付宝",
+      "username": "小芳",
+      "state": "已收货",
+      "key": 1
+    }
+  ],
+  "loginadmin": [
+    {
+      "id": "0001",
+      "username": "晓晓",
+      "userpass": "123",
+      "paths": [
+        {
+          "path": "/layouts/userlist"
+        },
+        {
+          "path": "/layouts/commuinfo"
+        },
+        {
+          "path": "/layouts/userstati"
+        }
+      ]
+    },
+    {
+      "id": "0002",
+      "email": "123456@qq.com",
+      "userpass": "123",
+      "paths": [
+        {
+          "path": "/layouts/orderlist"
+        },
+        {
+          "path": "/layouts/orderstati"
+        }
+      ]
+    },
+    {
+      "id": "0003",
+      "username": "小芬",
+      "userpass": "123",
+      "paths": [
+        {
+          "path": "/layouts/merchanlist"
+        },
+        {
+          "path": "/layouts/loginaccou"
+        },
+        {
+          "path": "/layouts/merchas"
+        }
+      ]
+    },
+    {
+      "id": "0004",
+      "username": "root",
+      "userpass": "123",
+      "paths": [
+        {
+          "path": "/layouts/userlist"
+        },
+        {
+          "path": "/layouts/commuinfo"
+        },
+        {
+          "path": "/layouts/userstati"
+        },
+        {
+          "path": "/layouts/merchanlist"
+        },
+        {
+          "path": "/layouts/loginaccou"
+        },
+        {
+          "path": "/layouts/merchas"
+        },
+        {
+          "path": "/layouts/orderlist"
+        },
+        {
+          "path": "/layouts/orderstati"
+        }
+      ]
+    }
+  ]
+}
