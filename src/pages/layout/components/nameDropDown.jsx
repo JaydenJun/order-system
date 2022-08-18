@@ -15,8 +15,9 @@ const NameDropDown = (props) => {
     function logout() { // 退出
         // 跳转到登录页
         history.push('/login')
-        // 去除localstorage的信息
+        // 去除localstorage的信息 
         localStorage.clear()
+        // localStorage.removeItem('token') // 比较繁琐，只能单个移除
     }
     return (
         <div className='dropdown'>

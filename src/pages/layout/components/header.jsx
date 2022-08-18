@@ -24,6 +24,7 @@ const Header = (props)=>{
           <span className='lanuage'>欢迎您</span>
           <div className='name'>
             <div onClick={nameClick}>{username} {nameDropDown ? (<UpOutlined />) : (<DownOutlined />)}</div>
+            {/* 下拉项内容 */}
             {nameDropDown ? (<NameDropDown />) : null}
           </div>
         </div>
