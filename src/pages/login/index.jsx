@@ -1,21 +1,30 @@
 import React, { useState } from "react";
-
-// 引入ant组件
-import { Form, Input, Button, Menu } from "antd";
-
+// 引入antd组件
+import { Menu } from "antd";
+// 引入样式
 import "./index.css";
-// 首先完成布局
-// 然后再实现逻辑
-
+// 引入请求
+import { loginAdmin } from '../../api/login'
+// 引入路由钩子
+import { useHistory } from 'react-router-dom'
+// 引入手机号组件
+import Tell from './components/tell'
+// 引入邮箱组件
+import Mail from './components/mail'
+// 完成布局
+// 实现逻辑
 const Login = (porps) => {
-  // state 声明
+  // state声明
   const [selectdKey, setSelectedKey] = useState(["mail"]); // 默认选中菜单
 
-  function changeSelectedKey(params) {
-    // 改变菜单默认选中值
-    console.log(params);
+  // 声明路由
+  const history = useHistory()
+  // 方法
+  function changeSelectedKey(params) {//改变菜单默认选中值
+    console.log(params)
     setSelectedKey([params.key]);
   }
+
   return (
     <div className="login">
       <div className="logincont">
@@ -26,26 +35,14 @@ const Login = (porps) => {
           selectedKeys={selectdKey}
           defaultSelectedKeys={["phone"]}
         >
-          <Menu.Item key="mail">邮箱</Menu.Item>
           <Menu.Item key="phone">手机号</Menu.Item>
+          <Menu.Item key="mail">邮箱</Menu.Item>
         </Menu>
-        <Form
-          className="login-form"
-          labelCol={{ span: 4 }}
-          wrapperCol={{ span: 16 }}
-        >
-          <div className="login-title">
-            <h2>手机号登录</h2>
-          </div>
-          {/*手机号 */}
-          <Form.Item label="手机号">
-            <Input placeholder="请输入手机号" />
-          </Form.Item>
-          {/*密码 */}
-          <Form.Item label="密码">
-            <Input type="password" placeholder="请输入密码" />
-          </Form.Item>
-        </Form>
+        { //selectdKey.includes('phone')
+          // 切换 form表单的展示就是根据 当前选择的菜单项来判断
+          selectdKey.indexOf('phone') >= 0 ? (<Tell history={history} loginAdmin={loginAdmin} />)
+            : (<Mail history={history} loginAdmin={loginAdmin} />)
+        }
       </div>
     </div>
   );
