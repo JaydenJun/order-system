@@ -38,7 +38,7 @@ const Layout = (props) => {
         {/* 右侧视图区域 */}
         <div className='main'>
           <Switch>
-            {/* 重定向 */}
+            {/* 重定向 exact精确匹配 */}
             <Redirect exact={true} to="/layout/userList" from="/layout" ></Redirect>
             {/* 用户列表 */}
             <Route path="/layout/userList" component={UserList}></Route>
