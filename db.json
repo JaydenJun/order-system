@@ -1,18 +1,6 @@
 {
   "userlist": [
     {
-      "id": "001",
-      "tel": "13468092456",
-      "username": "张三",
-      "age": "77",
-      "sex": "男",
-      "regist_time": "2020-09-03",
-      "ligin_count": "15",
-      "code": "700",
-      "ip_adress": "127.0.0.1",
-      "key": 0
-    },
-    {
       "id": "002",
       "tel": "14356783456",
       "username": "晓晓",

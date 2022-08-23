@@ -4,13 +4,13 @@
  * @Author: LiLin7
  * @Date: 2022-08-16 11:29:17
  * @LastEditors: LiLin7
- * @LastEditTime: 2022-08-16 11:30:46
+ * @LastEditTime: 2022-08-22 17:51:16
  */
 import React from 'react'
 // 引入路由对象
 import { Route, Switch, Redirect } from 'react-router-dom'
-// 引入ant组件
-import './index.css'
+// 引入样式
+import './index.less'
 // 引入header组件
 import Header from './components/header'
 import LayoutMenu from './components/menu'
