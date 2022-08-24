@@ -2,11 +2,11 @@
   "userlist": [
     {
       "id": "002",
-      "tel": "14356783456",
       "username": "晓晓",
-      "age": "21",
       "sex": "女",
-      "regist_time": "2021-01-04",
+      "age": "21",
+      "tel": "14356783456",
+      "regist_time": "2022-08-27",
       "ligin_count": "15",
       "code": "700",
       "ip_adress": "127.0.0.1"
