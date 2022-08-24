@@ -1,5 +1,5 @@
 // 引入请求方法
-import { get, update, remove } from './index'
+import { get, update, remove, post } from './index'
 // 获取登录用户信息接口
 export function getUserList(username) {
     return get('/userlist', { username })
@@ -12,4 +12,8 @@ export function modifyUser(id, data) {
 // 删除用户
 export function delUser(id) {
     return remove('/userlist', id)
+}
+// 添加用户
+export function addUsers(params) {
+    return post('/userlist', params)
 }
