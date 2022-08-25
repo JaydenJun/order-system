@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import { Modal, Form, Input, Button, DatePicker } from 'antd'
+import { Modal, Form, Input, Button, DatePicker, message } from 'antd'
 // 引入接口
 import { addUsers } from '../../../api/userManage'
 // 引入columns
-import { tailLayout } from '../utils/config.js'
+import { tailLayout } from '../../../utils'
 const AddUser = (props) => {
     // isAddVisible 添加用户弹框状态
     // addCancel 关闭弹框方法
@@ -26,6 +26,8 @@ const AddUser = (props) => {
         //调用接口 
         addUsers(params).then(data => {
             console.log(data)
+            // 提示用户
+            message.success('添成功！')
             // 成功之后 关闭弹框
             // setIsAddVisible(false)
             addCancel()

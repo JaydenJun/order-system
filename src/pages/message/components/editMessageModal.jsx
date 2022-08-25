@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import { Modal, Form, Input, Button, message, DatePicker } from 'antd'
-import moment from 'moment'
+import React, { useEffect } from 'react'
+import { Modal, Form, Input, Button, message } from 'antd'
 import { tailLayout } from '../../../utils'
 
 // 引入请求
 import { modifyUser } from '../../../api/userManage'
-const EditUser = (props) => {
+import { putMessage } from '../../../api/message'
+const EditMessageModal = (props) => {
     // getList 刷新列表方法
     // record 当前表单数据
     // isModalVisible 弹框展示状态
@@ -18,30 +18,30 @@ const EditUser = (props) => {
     //初始化
     useEffect(() => {
         // 将数据渲染到form表单上
-        // 序号	用户名	性别	年龄	手机号	注册时间	登录次数	积分	IP地址
         if (record) {
-            const { id, username, sex, age, tel, regist_time, ligin_count, code, ip_adress } = record;
+            /**
+            adress: "亲贤大街"
+            email: "2132313@qq.com"
+            id: "005"
+            local: "太原市小店区"
+            mailcode: "454455"
+            qqcode: "2132313"
+            states: "已审核"
+            tel: "13209788638"
+            username: "春野樱"
+            * 
+            */
+            const { id, username, adress, email, local, qqcode, states, mailcode, tel } = record;
             form.setFieldsValue({
-                id,
-                username,
-                sex,
-                age,
-                tel,
-                regist_time: moment(regist_time),
-                ligin_count,
-                code,
-                ip_adress
+                id, username, adress, email, local, qqcode, states, mailcode, tel
             });
         }
     }, [record])
 
     // 方法
     function onFinish(values) { // 校验成功事件
-        const params = {
-            ...values,
-            regist_time: values.regist_time.format('YYYY-MM-DD')
-        }
-        modifyUser(values.id, params).then(data => {
+        console.log(values, '修改通讯信息')
+        putMessage(values).then(data => {
             console.log(data, 'modifyuser')
             message.success('修改成功！')
             // 修改成功 则关闭弹框 
@@ -72,69 +72,69 @@ const EditUser = (props) => {
                 ]}>
                     <Input placeholder='请输入序号' />
                 </Form.Item>
-                <Form.Item label='用户名' name='username' rules={[
+                <Form.Item label='联系人' name='username' rules={[
                     {
                         required: true,
-                        message: '请输入用户名!',
+                        message: '请输入联系人!',
                     },
                 ]}>
-                    <Input placeholder='请输入用户名' />
+                    <Input placeholder='请输入联系人' />
                 </Form.Item>
-                <Form.Item label='性别' name='sex' rules={[
+                <Form.Item label='联系电话' name='tel' rules={[
                     {
                         required: true,
-                        message: '请输入性别!',
+                        message: '请输入联系电话!',
                     },
                 ]}>
-                    <Input placeholder='请输入性别' />
+                    <Input placeholder='请输入联系电话' />
                 </Form.Item>
-                <Form.Item label='年龄' name='age' rules={[
+                <Form.Item label='街道地址' name='adress' rules={[
                     {
                         required: true,
-                        message: '请输入年龄!',
+                        message: '请输入街道地址!',
                     },
                 ]}>
-                    <Input placeholder='请输入年龄' />
+                    <Input placeholder='请输入街道地址' />
                 </Form.Item>
-                <Form.Item label='手机号' name='tel' rules={[
+                <Form.Item label='邮编' name='email' rules={[
                     {
                         required: true,
-                        message: '请输入手机号!',
+                        message: '请输入邮编!',
                     },
                 ]}>
-                    <Input placeholder='请输入手机号' />
+                    <Input placeholder='请输入邮编' />
                 </Form.Item>
-                <Form.Item label='注册时间' name='regist_time' rules={[
+                <Form.Item label='省市区' name='local' rules={[
                     {
                         required: true,
-                        message: '请输入注册时间!',
+                        message: '请输入省市区!',
                     },
                 ]}>
-                    <DatePicker format='YYYY-MM-DD' />
+                    <Input placeholder='请输入省市区' />
                 </Form.Item>
-                <Form.Item label='登录次数' name='ligin_count' rules={[
+                <Form.Item label='QQ' name='qqcode' rules={[
                     {
                         required: true,
-                        message: '请输入登录次数!',
+                        message: '请输入QQ号码!',
                     },
                 ]}>
-                    <Input placeholder='请输入登录次数' />
+                    <Input placeholder='请输入QQ号码' />
                 </Form.Item>
-                <Form.Item label='积分' name='code' rules={[
+                <Form.Item label='状态' name='states' rules={[
                     {
                         required: true,
-                        message: '请输入积分!',
+                        message: '请输入状态!',
                     },
                 ]}>
-                    <Input placeholder='请输入积分' />
+                    <Input placeholder='请输入状态' />
                 </Form.Item>
-                <Form.Item label='IP地址' name='ip_adress' rules={[
+                <Form.Item label='邮箱' name='mailcode' rules={[
                     {
                         required: true,
-                        message: '请输入IP地址!',
+                        message: '请输入邮箱!',
                     },
                 ]}>
-                    <Input placeholder='请输入IP地址' />
+                    <Input placeholder='请输入邮箱' />
                 </Form.Item>
                 <Form.Item {...tailLayout}>
                     <Button onClick={handleCancel}>取消</Button>
@@ -145,4 +145,4 @@ const EditUser = (props) => {
     )
 }
 
-export default EditUser
+export default EditMessageModal
