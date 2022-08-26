@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Menu, Switch } from 'antd';
 // 引入路由
-import { useHistory } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 // 引入menu配置数据
 import react, { usestate, component, menuList, arr } from '../utils/config'
 const { SubMenu } = Menu;
@@ -14,6 +14,7 @@ const LayoutMenu = () => {
 
     // 路由声明
     const history = useHistory()
+    console.log(useLocation())
 
     // 方法声明
     const changeMode = value => { // 改变菜单类型

@@ -32,7 +32,10 @@ export const columns = (modify, del) => [
         dataIndex: 'tel',
         key: 'tel',
         width: 120,
-        align: 'center'
+        align: 'center',
+        render: (cell, record) => {
+            return <Tag color='green'>{cell}</Tag>
+        }
     },
     {
         title: '状态',
@@ -83,6 +86,7 @@ export const columns = (modify, del) => [
         dataIndex: 'adress',
         key: 'adress',
         width: 120,
+        ellipsis: true,
         align: 'center'
     },
     {
@@ -101,6 +105,8 @@ export const columns = (modify, del) => [
         title: '邮箱',
         dataIndex: 'email',
         key: 'email',
+        width: 100,
+        ellipsis: true,
         align: 'center'
     },
     {
