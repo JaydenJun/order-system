@@ -97,7 +97,7 @@ const AddOrEditUser = (props) => {
                         message: '请输入序号!',
                     },
                 ]}>
-                    <Input placeholder='请输入序号' />
+                    <Input disabled={!addOrEdit} placeholder='请输入序号' />
                 </Form.Item>
                 <Form.Item label='用户名' name='username' rules={[
                     {

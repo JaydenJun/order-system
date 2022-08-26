@@ -3,48 +3,30 @@ import { Modal, Form, Input, Button, message, Select } from 'antd'
 import { tailLayout } from '../../../utils'
 
 // 引入请求
-import { putMessage } from '../../../api/message'
+import { addMessage } from '../../../api/message'
 // 解构option
 const { Option } = Select
-const EditMessageModal = (props) => {
+const AddMessageModal = (props) => {
     // getList 刷新列表方法
-    // record 当前表单数据
     // isModalVisible 弹框展示状态
     // handleCancel 关闭弹框方法
-    const { getList, record, isModalVisible, handleCancel } = props
+    const { getList, isModalVisible, handleCancel } = props
 
     // 获取form方法
     const [form] = Form.useForm();
 
     //初始化
     useEffect(() => {
-        // 将数据渲染到form表单上
-        if (record) {
-            /**
-            adress: "亲贤大街"
-            email: "2132313@qq.com"
-            id: "005"
-            local: "太原市小店区"
-            mailcode: "454455"
-            qqcode: "2132313"
-            states: "已审核"
-            tel: "13209788638"
-            username: "春野樱"
-            * 
-            */
-            const { id, username, adress, email, local, qqcode, states, mailcode, tel } = record;
-            form.setFieldsValue({
-                id, username, adress, email, local, qqcode, states, mailcode, tel
-            });
-        }
-    }, [record])
+        // 需要将表单数据重置
+        form.resetFields()
+    }, [form, isModalVisible])
 
     // 方法
     function onFinish(values) { // 校验成功事件
         console.log(values, '修改通讯信息')
-        putMessage(values).then(data => {
-            console.log(data, 'modifyuser')
-            message.success('修改成功！')
+        addMessage(values).then(data => {
+            console.log(data, 'addMessage')
+            message.success('添加成功！')
             // 修改成功 则关闭弹框 
             // setIsModalVisible(false);
             handleCancel()
@@ -52,14 +34,14 @@ const EditMessageModal = (props) => {
             getList()
         }).catch(err => {
             console.log(err)
-            message.error('修改失败！')
+            message.error('添加失败！')
         })
     };
     function onFinishFailed(errorInfo) { // 校验失败事件
         console.log('Failed:', errorInfo);
     };
     return (
-        < Modal title="修改通讯信息" visible={isModalVisible} footer={null} onCancel={handleCancel} >
+        < Modal title="添加通讯信息" visible={isModalVisible} footer={null} onCancel={handleCancel} >
             <Form form={form} labelCol={{ span: 4 }} wrapperCol={{ span: 12 }}
                 onFinish={onFinish}
                 onFinishFailed={onFinishFailed}
@@ -85,7 +67,7 @@ const EditMessageModal = (props) => {
                     {
                         required: true,
                         message: '请输入联系电话!',
-                    },
+                    }
                 ]}>
                     <Input placeholder='请输入联系电话' />
                 </Form.Item>
@@ -150,4 +132,4 @@ const EditMessageModal = (props) => {
     )
 }
 
-export default EditMessageModal
+export default AddMessageModal

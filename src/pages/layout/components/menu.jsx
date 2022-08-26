@@ -87,8 +87,8 @@ const LayoutMenu = () => {
             <br />
             <Menu
                 style={{ width: 166 }}
-                defaultSelectedKeys={['userMange']}
-                defaultOpenKeys={['sub1']}
+                defaultSelectedKeys={['userList']}
+                defaultOpenKeys={['userMange']}
                 mode={mode}
                 theme={theme}
             >

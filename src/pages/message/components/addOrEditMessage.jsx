@@ -3,63 +3,71 @@ import { Modal, Form, Input, Button, message, Select } from 'antd'
 import { tailLayout } from '../../../utils'
 
 // 引入请求
-import { putMessage } from '../../../api/message'
+import { addMessage, putMessage } from '../../../api/message'
 // 解构option
 const { Option } = Select
-const EditMessageModal = (props) => {
+const AddOrEditMessage = (props) => {
     // getList 刷新列表方法
-    // record 当前表单数据
     // isModalVisible 弹框展示状态
     // handleCancel 关闭弹框方法
-    const { getList, record, isModalVisible, handleCancel } = props
+    // record 当前表单数据
+    // addOrEdit 表示当前弹框是添加还是修改
+    const { getList, isModalVisible, handleCancel, record, addOrEdit } = props
 
     // 获取form方法
     const [form] = Form.useForm();
 
     //初始化
     useEffect(() => {
-        // 将数据渲染到form表单上
-        if (record) {
-            /**
-            adress: "亲贤大街"
-            email: "2132313@qq.com"
-            id: "005"
-            local: "太原市小店区"
-            mailcode: "454455"
-            qqcode: "2132313"
-            states: "已审核"
-            tel: "13209788638"
-            username: "春野樱"
-            * 
-            */
-            const { id, username, adress, email, local, qqcode, states, mailcode, tel } = record;
-            form.setFieldsValue({
-                id, username, adress, email, local, qqcode, states, mailcode, tel
-            });
+        if (addOrEdit) {
+            // 需要将表单数据重置
+            form.resetFields()
+        } else {
+            // 修改通讯信息 的初始化操作
+            if (record) {
+                const { id, username, adress, email, local, qqcode, states, mailcode, tel } = record;
+                form.setFieldsValue({
+                    id, username, adress, email, local, qqcode, states, mailcode, tel
+                });
+            }
         }
-    }, [record])
+    }, [form, isModalVisible, record, addOrEdit])
 
     // 方法
     function onFinish(values) { // 校验成功事件
-        console.log(values, '修改通讯信息')
-        putMessage(values).then(data => {
-            console.log(data, 'modifyuser')
-            message.success('修改成功！')
-            // 修改成功 则关闭弹框 
-            // setIsModalVisible(false);
-            handleCancel()
-            // 并且 重新请求列表
-            getList()
-        }).catch(err => {
-            console.log(err)
-            message.error('修改失败！')
-        })
+        if (addOrEdit) {
+            addMessage(values).then(data => {
+                console.log(data, 'addMessage')
+                message.success('添加成功！')
+                // 修改成功 则关闭弹框 
+                // setIsModalVisible(false);
+                handleCancel()
+                // 并且 重新请求列表
+                getList()
+            }).catch(err => {
+                console.log(err)
+                message.error('添加失败！')
+            })
+        } else {
+            putMessage(values).then(data => {
+                console.log(data, 'modifyuser')
+                message.success('修改成功！')
+                // 修改成功 则关闭弹框 
+                // setIsModalVisible(false);
+                handleCancel()
+                // 并且 重新请求列表
+                getList()
+            }).catch(err => {
+                console.log(err)
+                message.error('修改失败！')
+            })
+        }
     };
     function onFinishFailed(errorInfo) { // 校验失败事件
         console.log('Failed:', errorInfo);
     };
     return (
-        < Modal title="修改通讯信息" visible={isModalVisible} footer={null} onCancel={handleCancel} >
+        < Modal title={addOrEdit ? "添加通讯信息" : "修改通讯信息"} visible={isModalVisible} footer={null} onCancel={handleCancel} >
             <Form form={form} labelCol={{ span: 4 }} wrapperCol={{ span: 12 }}
                 onFinish={onFinish}
                 onFinishFailed={onFinishFailed}
@@ -71,7 +79,8 @@ const EditMessageModal = (props) => {
                         message: '请输入序号!',
                     },
                 ]}>
-                    <Input placeholder='请输入序号' />
+                    {/* 添加不能禁用，修改必须禁用 */}
+                    <Input disabled={!addOrEdit} placeholder='请输入序号' />
                 </Form.Item>
                 <Form.Item label='联系人' name='username' rules={[
                     {
@@ -85,7 +94,7 @@ const EditMessageModal = (props) => {
                     {
                         required: true,
                         message: '请输入联系电话!',
-                    },
+                    }
                 ]}>
                     <Input placeholder='请输入联系电话' />
                 </Form.Item>
@@ -97,7 +106,7 @@ const EditMessageModal = (props) => {
                 ]}>
                     <Input placeholder='请输入街道地址' />
                 </Form.Item>
-                <Form.Item label='邮编' name='email' rules={[
+                <Form.Item label='邮编' name='mailcode' rules={[
                     {
                         required: true,
                         message: '请输入邮编!',
@@ -133,7 +142,7 @@ const EditMessageModal = (props) => {
                         <Option value="未审核">未审核</Option>
                     </Select>
                 </Form.Item>
-                <Form.Item label='邮箱' name='mailcode' rules={[
+                <Form.Item label='邮箱' name='email' rules={[
                     {
                         required: true,
                         message: '请输入邮箱!',
@@ -150,4 +159,4 @@ const EditMessageModal = (props) => {
     )
 }
 
-export default EditMessageModal
+export default AddOrEditMessage
